@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "wLvQAtmN1DRdT/ijFXmxkosHV+DK4uBb3JBdWjnn0qOYL5SfZ57Bd1bQyWdTC5iPTd4ZIpMB+qpUkFXhCkG5qg==",
+  "success": true,
+  "projectFilePath": "E:\\TRPZ3\\ImageLab\\ImageLab\\ImageLab\\ImageLab.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\юра\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.3\\microsoft.extensions.dependencyinjection.3.1.3.nupkg.sha512",
+    "C:\\Users\\юра\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.3\\microsoft.extensions.dependencyinjection.abstractions.3.1.3.nupkg.sha512"
+  ],
+  "logs": []
+}

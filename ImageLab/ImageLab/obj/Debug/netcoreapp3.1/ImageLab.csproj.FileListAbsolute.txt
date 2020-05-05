@@ -1,0 +1,16 @@
+E:\TRPZ3\ImageLab\ImageLab\ImageLab\bin\Debug\netcoreapp3.1\ImageLab.exe
+E:\TRPZ3\ImageLab\ImageLab\ImageLab\obj\Debug\netcoreapp3.1\ImageLab.csprojAssemblyReference.cache
+E:\TRPZ3\ImageLab\ImageLab\ImageLab\obj\Debug\netcoreapp3.1\ImageLab.AssemblyInfoInputs.cache
+E:\TRPZ3\ImageLab\ImageLab\ImageLab\obj\Debug\netcoreapp3.1\ImageLab.AssemblyInfo.cs
+E:\TRPZ3\ImageLab\ImageLab\ImageLab\bin\Debug\netcoreapp3.1\ImageLab.deps.json
+E:\TRPZ3\ImageLab\ImageLab\ImageLab\bin\Debug\netcoreapp3.1\ImageLab.runtimeconfig.json
+E:\TRPZ3\ImageLab\ImageLab\ImageLab\bin\Debug\netcoreapp3.1\ImageLab.runtimeconfig.dev.json
+E:\TRPZ3\ImageLab\ImageLab\ImageLab\bin\Debug\netcoreapp3.1\ImageLab.dll
+E:\TRPZ3\ImageLab\ImageLab\ImageLab\bin\Debug\netcoreapp3.1\ImageLab.pdb
+E:\TRPZ3\ImageLab\ImageLab\ImageLab\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\TRPZ3\ImageLab\ImageLab\ImageLab\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\TRPZ3\ImageLab\ImageLab\ImageLab\obj\Debug\netcoreapp3.1\ImageLab.csproj.CoreCompileInputs.cache
+E:\TRPZ3\ImageLab\ImageLab\ImageLab\obj\Debug\netcoreapp3.1\ImageLab.csproj.CopyComplete
+E:\TRPZ3\ImageLab\ImageLab\ImageLab\obj\Debug\netcoreapp3.1\ImageLab.dll
+E:\TRPZ3\ImageLab\ImageLab\ImageLab\obj\Debug\netcoreapp3.1\ImageLab.pdb
+E:\TRPZ3\ImageLab\ImageLab\ImageLab\obj\Debug\netcoreapp3.1\ImageLab.genruntimeconfig.cache
