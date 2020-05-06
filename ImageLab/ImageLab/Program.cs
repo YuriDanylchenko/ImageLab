@@ -28,8 +28,26 @@ namespace ImageLab
 
             while (appCode.Equals("Go")) 
             {
-                var image = _readImageService.GetImage(_userRequestService.RequestForImage());
+                var safely = _userRequestService.SafelyWork();
 
+                Image image;
+
+                if (safely)
+                {
+                    Image testImage = new Image()
+                    {
+                        Name = "testImage",
+                        Format = ImageFormat.PNG,
+                        Status = ImageStatus.READY
+                    };
+
+                    image = testImage.Clone();
+                }
+                else
+                {
+                    image = _readImageService.GetImage(_userRequestService.RequestForImage());
+                }
+               
                 string workWithImage = "Go";
 
                 while (workWithImage.Equals("Go"))

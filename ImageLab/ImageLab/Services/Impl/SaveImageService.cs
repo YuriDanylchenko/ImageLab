@@ -20,7 +20,8 @@ namespace ImageLab.Services.Impl
             }
             if (!SaveLookingInStatus(image.Status))
             {
-                Console.WriteLine($"Image {image.Name} can't save. You have to end operations");
+                Console.WriteLine($"Changes in image {image.Name} saved but you cant save on computer" +
+                    $"You have to end operations");
             }
         }
 
