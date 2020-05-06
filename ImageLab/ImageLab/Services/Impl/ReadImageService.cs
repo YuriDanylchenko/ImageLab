@@ -13,21 +13,17 @@ namespace ImageLab.Services.Impl
 
         }
 
-        public static T ToEnum<T>(string value)
-        {
-            return (T)Enum.Parse(typeof(T), value, true);
-        }
-
-        public Image GetImage(string name, string format)
+        public Image GetImage(UserRequestForImage request)
         {
             try
             {
-                ImageFormat imageFormat = (ImageFormat)Enum.Parse(typeof(ImageFormat), format.ToUpperInvariant(), true);
+                ImageFormat imageFormat = (ImageFormat)Enum.Parse(typeof(ImageFormat), request.ImageFormat.ToUpperInvariant(), true);
                 //ImageFormat imageFormat = (ImageFormat)Enum.Parse(typeof(ImageFormat), format);
                 Image image = new Image()
                 {
-                    Name = name,
-                    Format = imageFormat
+                    Name = request.Name,
+                    Format = imageFormat,
+                    Status = ImageStatus.READY
                 };
 
                 return image;

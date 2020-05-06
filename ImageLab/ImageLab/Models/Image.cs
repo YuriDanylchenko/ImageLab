@@ -9,5 +9,7 @@ namespace ImageLab.Models
     {
         public string Name { get; set; }
         public ImageFormat Format { get; set; }
+
+        public ImageStatus Status { get; set; }
     }
 }

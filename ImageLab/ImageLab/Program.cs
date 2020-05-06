@@ -1,4 +1,6 @@
-﻿using ImageLab.Services;
+﻿using ImageLab.Enums;
+using ImageLab.Models;
+using ImageLab.Services;
 using ImageLab.Services.Impl;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -11,20 +13,76 @@ namespace ImageLab
         static void Main(string[] args)
         {
             var serviceProvider = new ServiceCollection()
-           //.AddLogging()
            .AddSingleton<IReadImageservice, ReadImageService>()
-           //.AddSingleton<IBarService, BarService>()
+           .AddSingleton<IUserRequestService, UserRequestService>()
+           .AddSingleton<IImageOperationService, ImageOperationService>()
+           .AddSingleton<ISaveImageService, SaveImageService>()
            .BuildServiceProvider();
 
             var _readImageService = serviceProvider.GetService<IReadImageservice>();
+            var _userRequestService = serviceProvider.GetService<IUserRequestService>();
+            var _imageOperationService = serviceProvider.GetService<IImageOperationService>();
+            var _saveImageService = serviceProvider.GetService<ISaveImageService>();          
 
-            Console.WriteLine("Write name of image");
-            string name = Console.ReadLine();
-            Console.WriteLine("Write format type");
-            string format = Console.ReadLine();
+            string appCode = "Go";
 
-            _readImageService.GetImage(name, format);
-            Console.WriteLine("Hello World!");
+            while (appCode.Equals("Go")) 
+            {
+                var image = _readImageService.GetImage(_userRequestService.RequestForImage());
+
+                string workWithImage = "Go";
+
+                while (workWithImage.Equals("Go"))
+                {
+                    var operationCode = _userRequestService.OperationRequest();
+
+                    switch (operationCode)
+                    {
+                        case 1:
+                            {
+                                image = _imageOperationService.MoveImage(image, "left");
+                                _saveImageService.SaveImage(image);
+                                break;
+                            };
+                        case 2:
+                            {
+                                image = _imageOperationService.StrecthImage(image, 30);
+                                _saveImageService.SaveImage(image);
+                                break;
+                            }
+                        case 3:
+                            {
+                                image = _imageOperationService.CompressImage(image, 20);
+                                _saveImageService.SaveImage(image);
+                                break;
+                            }
+                        case 4:
+                            {
+                                image = _imageOperationService.CutImage(image, 10, "right");
+                                _saveImageService.SaveImage(image);
+                                break;
+                            }
+                        default: break;
+
+                    }
+
+                 var resp = _userRequestService.ContunueRequest();
+
+                    if (!resp.Equals("Yes"))
+                    {
+                        image.Status = ImageStatus.FINISHED;
+                        _saveImageService.SaveImage(image);
+                        workWithImage = "Finish";
+                    }
+                }
+
+                if (_userRequestService.ExitFromApp())
+                {
+                    appCode = "Finish";
+                }
+            }                     
+
+            Console.WriteLine("The end");
         }
     }
 }
