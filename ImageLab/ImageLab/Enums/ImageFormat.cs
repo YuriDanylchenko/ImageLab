@@ -8,7 +8,7 @@ namespace ImageLab.Enums
     {
         JPEG,
         PNG,
-        BMP,
+        GIF,
         BAT,
         SVG
     }

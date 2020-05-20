@@ -12,16 +12,7 @@ namespace ImageLab.Services.Impl
         {
 
         }
-
-        public bool SafelyWork()
-        {
-            Console.WriteLine($"If you want work with test image not with you write {"Yes"}");
-            var response = Console.ReadLine();
-
-            if (response.Equals("Yes")) return true;
-            return false;
-        } 
-
+    
         public UserRequestForImage RequestForImage()
         {
             UserRequestForImage userRequestForImage = new UserRequestForImage();

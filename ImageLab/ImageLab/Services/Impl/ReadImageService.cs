@@ -21,9 +21,10 @@ namespace ImageLab.Services.Impl
                 //ImageFormat imageFormat = (ImageFormat)Enum.Parse(typeof(ImageFormat), format);
                 Image image = new Image()
                 {
-                    Name = request.Name,
-                    Format = imageFormat,
-                    Status = ImageStatus.READY
+                    Name = request.Name,                    
+                    Direction = ImageHeadDirection.TOP,
+                    Format = imageFormat
+                    
                 };
 
                 return image;

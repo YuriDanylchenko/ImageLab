@@ -1,34 +1,23 @@
 ﻿
 using ImageLab.Enums;
 using ImageLab.Models;
+using ImageLab.States;
 using System;
 
 namespace ImageLab.Services.Impl
 {
-    public class SaveImageService : ISaveImageService
-    {
-        public SaveImageService()
-        {
+	public class SaveImageService : ISaveImageService
+	{
+		public SaveImageService()
+		{
 
-        }
+		}
 
-        public void SaveImage(Image image)
-        {
-            if (SaveLookingInStatus(image.Status))
-            {
-                Console.WriteLine($"Image {image.Name} saved in {image.Format.ToString()}");
-            }
-            if (!SaveLookingInStatus(image.Status))
-            {
-                Console.WriteLine($"Changes in image {image.Name} saved but you cant save on computer" +
-                    $"You have to end operations");
-            }
-        }
+		public void SaveImage(Image image)
+		{
+			var imageForSave = image.DeepCloneForSave();
+			Console.WriteLine($"{imageForSave.Name} was saved in {imageForSave.Format.ToString()}");
+		}
 
-        private bool SaveLookingInStatus(ImageStatus status)
-        {
-            if (status == ImageStatus.FINISHED) return true;
-            return false;
-        }
-    }
+	}
 }

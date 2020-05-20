@@ -7,7 +7,7 @@ namespace ImageLab.Services
 {
     public interface IImageOperationService
     {
-        public Image MoveImage(Image image, string direction);
+        public Image MoveImage(Image image);
 
         public Image StrecthImage(Image image, int length);
 

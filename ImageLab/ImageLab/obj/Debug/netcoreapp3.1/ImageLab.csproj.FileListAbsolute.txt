@@ -1,5 +1,4 @@
 E:\TRPZ3\ImageLab\ImageLab\ImageLab\bin\Debug\netcoreapp3.1\ImageLab.exe
-E:\TRPZ3\ImageLab\ImageLab\ImageLab\obj\Debug\netcoreapp3.1\ImageLab.csprojAssemblyReference.cache
 E:\TRPZ3\ImageLab\ImageLab\ImageLab\obj\Debug\netcoreapp3.1\ImageLab.AssemblyInfoInputs.cache
 E:\TRPZ3\ImageLab\ImageLab\ImageLab\obj\Debug\netcoreapp3.1\ImageLab.AssemblyInfo.cs
 E:\TRPZ3\ImageLab\ImageLab\ImageLab\bin\Debug\netcoreapp3.1\ImageLab.deps.json
